@@ -2,12 +2,13 @@
 
 If you just want to mess around, you can test with:
 
+	docker pull aerth/godev
 	docker run -it aerth/godev
 
 Chances are you will want some kind of persistence.
 
-	sudo mkdir -p /opt/gopath /opt/data
-    docker run -it -v /opt/gopath:/go /opt/data:/opt aerth/godev
+    sudo mkdir -p /opt/gopath /opt/data
+    docker run -it -v /opt/gopath:/go -v /opt/data:/opt aerth/godev
 
 ## Tools:
 
