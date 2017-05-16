@@ -21,9 +21,12 @@ docker run -it \
         aerth/godev
 ```
 
+For use with no ssh/gpg keys, here is a more simple example
 
-    sudo mkdir -p /opt/gopath /opt/data
-    docker run -it -v /opt/gopath:/go -v /opt/data:/opt aerth/godev
+```
+sudo mkdir -p /opt/gopath /opt/data
+docker run -it -v /opt/gopath:/go -v /opt/data:/opt aerth/godev
+```
 
 ## Tools:
 
