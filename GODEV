@@ -1,8 +1,8 @@
 #!/bin/bash
-# start docker aerth/godev with shared volumes: ssh, gnupg, gopath, data
 docker run -it \
 	-v /opt/devjail/ssh:/root/.ssh \
 	-v /opt/devjail/gnupg:/root/.gnupg \
 	-v /opt/gopath:/go \
 	-v /opt/data:/opt \
+	-v $HOME/.gitconfig:/root/.gitconfig \
 	aerth/godev
