@@ -5,7 +5,22 @@ If you just want to mess around, you can test with:
 	docker pull aerth/godev
 	docker run -it aerth/godev
 
+
 Chances are you will want some kind of persistence.
+Save and modify this bash script to start up the environment
+This script assumes your deploy key is in /opt/devjail/ssh/, and
+your gnupgp directory is /opt/devjail/gnupg.
+
+```
+#!/bin/bash
+docker run -it \
+        -v /opt/devjail/ssh:/root/.ssh \
+        -v /opt/devjail/gnupg:/root/.gnupg \
+        -v /opt/gopath:/go \
+        -v /opt/data:/opt \
+        aerth/godev
+```
+
 
     sudo mkdir -p /opt/gopath /opt/data
     docker run -it -v /opt/gopath:/go -v /opt/data:/opt aerth/godev
