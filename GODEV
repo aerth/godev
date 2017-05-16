@@ -1,0 +1,7 @@
+#!/bin/bash
+docker run -it \
+	-v /opt/devjail/ssh:/root/.ssh \
+	-v /opt/devjail/gnupg:/root/.gnupg \
+	-v /opt/gopath:/go \
+	-v /opt/data:/opt \
+	aerth/godev
