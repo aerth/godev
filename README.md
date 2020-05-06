@@ -13,8 +13,7 @@
   * file
 
 ### installation
-  * `docker pull aerth/godev:latest`
-  * `wget -O GoDev https://raw.githubusercontent.com/aerth/godev/master/run.sh`
+  * `wget -O GoDev https://raw.githubusercontent.com/aerth/godev/master/GoDev`
   * `chmod +x GoDev`
 
 finally, move `GoDev` to `/usr/local/bin/` or somewhere in `$PATH`
