@@ -5,4 +5,4 @@ fi
 echo "shared directory: $GODEV_SHARED_DIR"
 echo "in docker container: /src"
 mkdir -p $GODEV_SHARED_DIR
-docker run -it -v $GODEV_SHARED_DIR:/src aerth:go bash
+docker run -it -v $GODEV_SHARED_DIR:/src aerth/godev bash

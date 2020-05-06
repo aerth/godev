@@ -1,1 +1,1 @@
-time docker build --tag aerth:go .
+time docker build --tag aerth/godev:latest .
