@@ -23,6 +23,14 @@ Or:
 
   * `export GOFLAGS=-tags=osusergo,netgo`
 
+Or if using CGO, something like this in your Makefile
+
+```
+buildflags += --ldflags '-linkmode external -extldflags "-static"'
+test:
+        go build -v $(buildflags) -o $@
+```
+
 The image comes out to 1.25 GB
 
 
