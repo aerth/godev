@@ -26,7 +26,7 @@ Or always use the same directory, regardless of from where it is being ran.
 
 `export GODEV_SHARED_DIR=$HOME/src`
 
-Note: since you are user `root` in the container, we `chown` the shared dirctory when exiting the session. This could take a while lead to unexpected results if the shared directory is not even owned by the user, for example, `/`.
+Note: since you are user `root` in the container, we `chown` the shared dirctory when exiting the session. This could take a while or lead to unexpected results if the shared directory is not even owned by the user, for example, `/`.
 
 It's safer to use a dedicated shared directory such as `$PWD/data` by using the GODEV_SHARED_DIR variable in ~/.bashrc or editing the GoDev launcher script.
 
