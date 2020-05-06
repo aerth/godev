@@ -12,6 +12,24 @@
   * gdb
   * file
 
+### usage
+
+By default, GoDev creates a directory to be shared with the container in `./data`, relative to current working directory. You may want to change this behavior.
+
+You can also edit the launcher script to add port forwarding etc
+
+Change line 2 of the GoDev launcher script to this:
+
+`GODEV_SHARED_DIR=$PWD`
+
+Or always use the same directory, regardless of from where it is being ran.
+
+`export GODEV_SHARED_DIR=$HOME/src`
+
+Note: since you are user `root` in the container, we `chown` the shared dirctory when exiting the session. This could take a while lead to unexpected results if the shared directory is not even owned by the user, for example, `/`.
+
+It's safer to use a dedicated shared directory such as `$PWD/data` by using the GODEV_SHARED_DIR variable in ~/.bashrc or editing the GoDev launcher script.
+
 ### installation
   * `wget -O GoDev https://raw.githubusercontent.com/aerth/godev/master/GoDev`
   * `chmod +x GoDev`
