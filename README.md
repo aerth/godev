@@ -12,6 +12,12 @@
   * gdb
   * file
 
+### installation
+  * `docker pull aerth/godev:latest`
+  * `wget -O GoDev https://raw.githubusercontent.com/aerth/godev/master/run.sh`
+  * `chmod +x GoDev`
+  * # optionally, move `GoDev` to `/usr/local/bin/` or somewhere in `$PATH`
+
 ### notes
 
 No point setting `CGO_ENABLED=0` by default.
